@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tikets FM</string>
+    <string name="buy_tiket">Купить билет!</string>
+    <string name="alreadyBought">Уже куплен</string>
+</resources>
