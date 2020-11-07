@@ -1,8 +1,6 @@
 package com.example.tiketsfm
 
-import android.content.Context
 import android.content.DialogInterface
-import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.LayoutInflater
@@ -12,9 +10,9 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.google.android.material.snackbar.Snackbar
-import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.rengwuxian.materialedittext.MaterialEditText
 
 
@@ -27,11 +25,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         signInBtn = findViewById(R.id.signIn)
         root = findViewById(R.id.root_element)
-        FirebaseApp.initializeApp(this)
+
         auth = FirebaseAuth.getInstance()
 
-       // signInBtn.setOnClickListener{showSignInWindow()}
-
+        signInBtn.setOnClickListener{showSignInWindow()}
     }
 
     fun showSignInWindow(){
@@ -72,4 +69,5 @@ class MainActivity : AppCompatActivity() {
         }
         dialog.show()
     }
+
 }
