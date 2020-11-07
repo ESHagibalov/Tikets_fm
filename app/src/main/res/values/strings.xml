@@ -2,4 +2,6 @@
     <string name="app_name">Tikets FM</string>
     <string name="buy_tiket">Купить билет!</string>
     <string name="alreadyBought">Уже куплен</string>
+    <string name="email">Email</string>
+    <string name="password">Пароль</string>
 </resources>
