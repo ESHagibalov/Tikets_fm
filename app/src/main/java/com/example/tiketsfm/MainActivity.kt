@@ -1,14 +1,18 @@
 package com.example.tiketsfm
 
+import android.R.attr
 import android.content.DialogInterface
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.fragment.app.FragmentActivity
+import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
@@ -58,16 +62,20 @@ class MainActivity : AppCompatActivity() {
                 return@setPositiveButton
             }
 
+            auth.createUserWithEmailAndPassword(email.text.toString(), password.text.toString())
+                .addOnCompleteListener(this,
+                    OnCompleteListener<AuthResult?> { task ->
+                        if (task.isSuccessful) {
+                            Snackbar.make(root, "Registration succeed.", Snackbar.LENGTH_SHORT).show()
+                        }
+                    })
             auth.signInWithEmailAndPassword(email.text.toString(), password.text.toString())
                 .addOnSuccessListener {authResult: AuthResult? ->
-                    //переход в другую активити?
-                    //startActivity(Intent(this@MainActivity, MapActivity::class.java))
-                    finish()
+                    Snackbar.make(root, "Authentication succeed.", Snackbar.LENGTH_SHORT).show()
                 }.addOnFailureListener { e: Exception ->
-                    Snackbar.make(root, "Ошибка авторизации" + e.message, Snackbar.LENGTH_SHORT).show()
+                    Snackbar.make(root, "Authentication failed: " + e.message, Snackbar.LENGTH_SHORT).show()
                 }
         }
         dialog.show()
     }
-
 }
