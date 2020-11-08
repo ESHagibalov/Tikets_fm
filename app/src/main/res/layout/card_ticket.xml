@@ -25,21 +25,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Новый год"
-                android:textSize="22sp"/>
+                android:textSize="22sp"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/text_view_place"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Калининград, Правая набережная, 21"
-                android:textSize="18sp"/>
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/text_view_date_and_time"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="29.12.2020, 22:00"
-                android:textSize="18sp"/>
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
 
         </LinearLayout>
 
@@ -55,21 +58,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Цена: 200 рублей"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/text_view_remain"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Осталось: 169 билетов"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/text_view_bought"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="КУПЛЕН"
-                android:textSize="30sp"/>
+                android:textSize="30sp"
+                android:textColor="@color/black"/>
 
         </LinearLayout>
 

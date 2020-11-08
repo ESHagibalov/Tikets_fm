@@ -11,7 +11,7 @@ class TicketsActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
 
     private val testList = listOf(
-        Ticket("День Первака", "Клуб завод", Date(2020,10,30), 100, 300, false),
+        Ticket("День Первака", "Клуб склад", Date(2020,10,30), 100, 300, false),
         Ticket("Новый год", "Правая набережная", Date(2020,12,29), 200, 300, true)
     )
 
